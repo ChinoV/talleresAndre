@@ -9,9 +9,10 @@ namespace talleresAndre.Logic
     class Car
     {
         int SerialMotor { get; set; }
+
         public void Move()
         {
-
+            Console.WriteLine("The car was moved");
         }
     }
 }

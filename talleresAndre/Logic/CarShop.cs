@@ -13,9 +13,14 @@ namespace talleresAndre.Logic
         Vehicle[]Capacity { get; set; }
         public List<Receipt> Bills { get; set; }
 
-        public void RegisterVehicle()
+        public void RegisterCar(Vehicle[] Capacity)
         {
-
+            Car Car = new Car();
+            
+        }
+        public void RegisterBike()
+        {
+            Bike Car = new Bike();
         }
         public void AnalyzeVehicle()
         {
