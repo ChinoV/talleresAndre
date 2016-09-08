@@ -6,12 +6,22 @@ using System.Threading.Tasks;
 
 namespace talleresAndre.Logic
 {
-    class Car
+    class Car: Vehicle
     {
-        int SerialMotor { get; set; }
-        public void Move()
+        int MotorId { get; set; }
+
+        public Car(string pPlate, string pBrand, string pColor, int pMotorId)
         {
 
+            this.Plate = pPlate;
+            this.Brand = pBrand;
+            this.Color = pColor;
+            this.MotorId = pMotorId; 
+        }
+
+        public void Move()
+        {
+            Console.WriteLine("Car was Moved");
         }
     }
 }

@@ -10,8 +10,13 @@ namespace talleresAndre.Logic
     {
         public string CarShopName { get; set; }
         public DateTime PayDate { get; set; }
-        public List<string> Plates { get; set; }
+        public List<Vehicle> Vehicles { get; set; }
         public double TotalCost { get; set; }
+
+        public Receipt()
+        {
+
+        }
 
     }
 }
