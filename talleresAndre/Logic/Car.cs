@@ -6,22 +6,22 @@ using System.Threading.Tasks;
 
 namespace talleresAndre.Logic
 {
-    class Car: Vehicle
+    class Car:Vehicle
     {
-        int MotorId { get; set; }
+        int MotorCode { get; set; }
 
-        public Car(string pPlate, string pBrand, string pColor, int pMotorId)
+        public Car(string pPLate, string pBrand, string pColor, int pMotorCode)
         {
-
-            this.Plate = pPlate;
+            this.Plate = pPLate;
             this.Brand = pBrand;
             this.Color = pColor;
-            this.MotorId = pMotorId; 
+            this.MotorCode = pMotorCode;
+            PowerStatus = false;
         }
 
         public void Move()
         {
-            Console.WriteLine("Car was Moved");
+            Console.WriteLine("The car was moved");
         }
     }
 }

@@ -6,18 +6,17 @@ using System.Threading.Tasks;
 
 namespace talleresAndre.Logic
 {
-    class Bike: Vehicle
+    class Bike:Vehicle
     {
-        string cylinders { get; set; }
+        string Cylinders { get; set; }
 
-        public Bike(string pPlate, string pBrand, string pColor, string pCylinders)
+        public Bike(string pPLate, string pBrand, string pColor, string pCylinders)
         {
-            
-            this.Plate = pPlate;
+            this.Plate = pPLate;
             this.Brand = pBrand;
             this.Color = pColor;
-            this.cylinders = pCylinders;
-
+            this.Cylinders = pCylinders;
+            PowerStatus = false;
         }
     }
 }
