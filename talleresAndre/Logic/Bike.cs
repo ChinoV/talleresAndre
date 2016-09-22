@@ -10,11 +10,11 @@ namespace talleresAndre.Logic
     {
         string Cylinders { get; set; }
 
-        public Bike(string pPLate, string pBrand, string pColor, string pCylinders)
+        public Bike(string pPLate, string pColor, string pBrand, string pCylinders)
         {
             this.Plate = pPLate;
-            this.Brand = pBrand;
             this.Color = pColor;
+            this.Brand = pBrand;
             this.Cylinders = pCylinders;
             PowerStatus = false;
         }

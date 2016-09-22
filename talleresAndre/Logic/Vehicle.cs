@@ -22,5 +22,26 @@ namespace talleresAndre.Logic
         {
             this.PowerStatus = false;
         }
+
+        public string VehicleToString()
+        {
+            string VehicleInfo;
+            string VehicleStatus;
+
+            if (PowerStatus)
+            {
+                VehicleStatus = " Vehicle engine is ON";
+            }
+            else
+            {
+                VehicleStatus = " Vehicle engine is OFF";
+            }
+
+            VehicleInfo = "\nVehicle License Plate: " + Plate+
+                          "\nBrand: " + Brand + "\nColor: "+Color+
+                          "\nVehicle Status: " + VehicleStatus;
+
+            return VehicleInfo;
+        }
     }
 }

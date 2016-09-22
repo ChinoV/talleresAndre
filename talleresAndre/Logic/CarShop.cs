@@ -33,23 +33,26 @@ namespace talleresAndre.Logic
             return -1;
         }
 
-        public void RegisterCar(List<string>Values)
+        public bool RegisterCar(List<string>Values)
         {
-            if (this.VehicleList.Count() < VehicleList.Capacity)
+            if (this.VehicleList.Count() < Capacity)
             {
-                Car objCar = new Car(Values[0], Values[1], Values[2], int.Parse(Values[3]));
+                Car objCar = new Car(Values[0], Values[1], Values[2], Values[3]);
                 this.VehicleList.Add(objCar);
+                return true;
             }
-            
+            return false;
         }
 
-        public void RegisterBike(List<string> Values)
+        public bool RegisterBike(List<string> Values)
         {
-            if (this.VehicleList.Count() < VehicleList.Capacity)
+            if (this.VehicleList.Count() < Capacity)
             {
                 Bike objBike = new Bike(Values[0], Values[1], Values[2], Values[3]);
                 this.VehicleList.Add(objBike);
+                return true;
             }
+            return false;
         }
 
         public void AnalyzeVehicle(Vehicle objVehicle)
@@ -67,9 +70,8 @@ namespace talleresAndre.Logic
 
         }
 
-        public void Return()
+        public void ReturnVehicle()
         {
-
             //search array by plate and delete
         }
 
@@ -98,6 +100,21 @@ namespace talleresAndre.Logic
                 return false;
             }
 
+        }
+
+        public string CarShopToString()
+        {
+            string CarShopInfo;
+            int AvailableSpace = Capacity - VehicleList.Count;
+
+            CarShopInfo = "\nCar Shop Id: " + Id + "\nProvince: " + Province +
+                           "\nBills: " + Bills + "\nCar shop's max capacity:" + Capacity+ "\nAvailable space:"+ AvailableSpace; 
+
+            foreach (Vehicle objVehicle in VehicleList)
+            { 
+                CarShopInfo += objVehicle.VehicleToString();
+            }
+            return CarShopInfo;
         }
     }
 }

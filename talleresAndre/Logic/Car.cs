@@ -8,13 +8,13 @@ namespace talleresAndre.Logic
 {
     class Car:Vehicle
     {
-        int MotorCode { get; set; }
+        string MotorCode { get; set; }
 
-        public Car(string pPLate, string pBrand, string pColor, int pMotorCode)
+        public Car(string pPLate, string pColor, string pBrand, string pMotorCode)
         {
-            this.Plate = pPLate;
-            this.Brand = pBrand;
+            this.Plate = pPLate; 
             this.Color = pColor;
+            this.Brand = pBrand;
             this.MotorCode = pMotorCode;
             PowerStatus = false;
         }
@@ -23,5 +23,26 @@ namespace talleresAndre.Logic
         {
             Console.WriteLine("The car was moved");
         }
+
+        public string CarToString()
+        {
+            string CarInfo;
+            string CarStatus;
+
+            if (PowerStatus)
+            {
+                CarStatus = " Vehicle engine is ON";
+            }
+            else
+            {
+                CarStatus = " Vehicle engine is OFF";
+            }
+
+            CarInfo = "\nCar's License Plate: " + Plate +
+                          "\nCar's Brand: " + Brand + "\nColor: " + Color +
+                          "\nCar's Status: " + CarStatus;
+            return CarInfo;
+        }
+
     }
 }
